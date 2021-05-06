@@ -9,12 +9,17 @@ import { products } from '../products';
 })
 export class ProductListComponent {
   products = products;
-
+  /**
+   * Returns product description or generic description if product has none.
+   */
+  getProductDescription(product) {
+    if (product.description) return 'Description: ' + product.description;
+    else return 'Description: A great product';
+  }
   share() {
     window.alert('The product has been shared!');
   }
 }
-
 
 /*
 Copyright Google LLC. All Rights Reserved.
