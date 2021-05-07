@@ -1,0 +1,9 @@
+<h3>Cart</h3>
+<p>
+  <a routerLink="/shipping">Shipping Prices</a>
+</p>
+<!--Using directive ngFor that renders a template for each item in items collection-->
+<div class="cart-item" *ngFor="let item of items">
+  <span>{{ item.name }}</span>
+  <span>{{ item.price | currency:'EUR':'symbol' }}</span>
+</div>

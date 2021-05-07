@@ -1,8 +1,9 @@
 <h2>Products</h2>
-<!--For each product in products create a div-->
-<!--Products is imported in product-list.components.ts which is basically products.ts-->
+<!--Directive: For each product in products create a div-->
+
 <div *ngFor="let product of products">
-  <h3><a [title]="product.name + 'details'">{{product.name}}</a></h3>
+  <!--Products is imported in product-list.components.ts which is basically products.ts-->
+  <h3><a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">{{product.name}}</a></h3>
   <p>
     {{getProductDescription(product)}}
   </p>
